@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV Keyzhia Nurul Aulia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8F7FC; --panel:#E6E9FA; --card:#FFFFFF; --ink:#2A2C45; --muted:#5E607C;
+  --line:#DCDDEE; --btn:#5766C4; --btn-ink:#FFFFFF; --blush:#F7DDE5; --mint:#D5EBE1; --sky:#D9E6F7;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk","Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#181A2B; --panel:#232640; --card:#20233A; --ink:#ECEDF8; --muted:#A8ABCB;
+    --line:#33375A; --btn:#AEB9F5; --btn-ink:#181A2B; --blush:#4A3445; --mint:#2F4A44; --sky:#2F4262;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#181A2B; --panel:#232640; --card:#20233A; --ink:#ECEDF8; --muted:#A8ABCB;
+  --line:#33375A; --btn:#AEB9F5; --btn-ink:#181A2B; --blush:#4A3445; --mint:#2F4A44; --sky:#2F4262;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.65;transition:background .3s,color .3s}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--btn);outline-offset:3px;border-radius:6px}
+
+.page{max-width:1080px;margin:0 auto;padding:clamp(1rem,4vw,3rem);display:grid;grid-template-columns:320px 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+
+/* Sidebar */
+.side{position:sticky;top:2rem;background:var(--panel);border-radius:28px;padding:2rem 1.5rem;text-align:center}
+.photo{width:200px;height:250px;margin:0 auto 1.5rem;border-radius:100px 100px 20px 20px;background:var(--blush);overflow:hidden;position:relative;display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo span{font-family:var(--serif);font-size:3.5rem;color:var(--muted)}
+.side h1{font-family:var(--serif);font-weight:600;font-size:1.75rem;line-height:1.2;margin:0 0 .5rem}
+.side p{margin:0 0 1.5rem;color:var(--muted)}
+.actions{display:grid;gap:.6rem}
+.btn{font:inherit;font-weight:600;border:0;border-radius:999px;padding:.75rem 1.25rem;cursor:pointer;background:var(--btn);color:var(--btn-ink);transition:transform .15s,opacity .15s}
+.btn:hover{opacity:.9}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--muted)}
+
+/* Main */
+main section{padding-bottom:2.75rem}
+main section+section{border-top:1px solid var(--line);padding-top:2.25rem}
+h2{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:0 0 1rem}
+.lead{max-width:62ch;margin:0}
+.school{font-weight:600;font-size:1.15rem;margin:0}
+.school-sub{color:var(--muted);margin:0 0 1.25rem}
+.sub{font-weight:600;margin:0 0 .6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:0;list-style:none}
+.chips li{padding:.4rem 1.1rem;border-radius:999px;font-weight:500}
+.chips li:nth-child(1){background:var(--sky)}
+.chips li:nth-child(2){background:var(--mint)}
+.chips li:nth-child(3){background:var(--blush)}
+
+.skills{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;max-width:62ch}
+.skills li{position:relative;padding:.75rem 1rem .75rem 2.5rem;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.skills li::before{content:"";position:absolute;left:1rem;top:1.2rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--btn)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.info{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.info small{display:block;color:var(--muted)}
+.info a{text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.info a:hover{border-color:var(--btn)}
+form{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.5rem;display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:500;font-size:.95rem}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.65rem .8rem;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--btn)}
+textarea{min-height:110px;resize:vertical}
+.note{margin:0;font-size:.9rem;color:var(--muted)}
+
+@media (max-width:820px){
+  .page{grid-template-columns:1fr}
+  .side{position:static}
+  .contact{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Cetak / simpan PDF */
+@media print{
+  :root,:root[data-theme="dark"]{--bg:#fff;--panel:#E6E9FA;--card:#fff;--ink:#222;--muted:#555;--line:#ccc;--blush:#F7DDE5;--mint:#D5EBE1;--sky:#D9E6F7}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:10.5pt;line-height:1.5}
+  .actions,form{display:none}
+  .page{grid-template-columns:230px 1fr;padding:0;gap:1.25rem;break-inside:avoid;page-break-inside:avoid}
+  .side{position:static;padding:1.25rem 1rem}
+  .photo{width:150px;height:190px}
+  h2{font-size:14pt;margin-bottom:.5rem}
+  .contact{grid-template-columns:1fr}
+  .info{gap:.6rem}
+  .skills{gap:.5rem}
+  .skills li{padding:.5rem .75rem .5rem 2.25rem}
+  .skills li::before{top:.85rem}
+  main section{padding-bottom:1rem}
+  main section+section{padding-top:.9rem}
+  @page{size:A4;margin:14mm}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="side">
+    <div class="photo">
+      <span aria-hidden="true">KA</span>
+      <!-- Ganti "foto.jpg" dengan nama file fotomu (simpan di folder yang sama) -->
+      <img src="foto.jpg" alt="Foto Keyzhia Nurul Aulia" onerror="this.remove()">
+    </div>
+    <h1>Keyzhia Nurul Aulia</h1>
+    <p>SMA Gunung Madu, XII B</p>
+    <div class="actions">
+      <button class="btn" id="download" type="button">Unduh CV (PDF)</button>
+      <button class="btn ghost" id="theme" type="button" aria-pressed="false">Mode gelap</button>
+    </div>
+  </aside>
+
+  <main>
+    <section id="profil">
+      <h2>Profil Singkat</h2>
+      <p class="lead">Saya orangnya cukup peka dan mudah memahami perasaan orang lain. Kalau sudah dekat dengan seseorang, saya cenderung setia, perhatian, dan suka memastikan orang yang saya sayangi baik-baik saja. Saya juga cukup protektif, bukan karena ingin membatasi, tapi karena saya peduli.</p>
+    </section>
+
+    <section id="pendidikan">
+      <h2>Pendidikan</h2>
+      <p class="school">SMA Gunung Madu</p>
+      <p class="school-sub">Kelas XII B</p>
+      <p class="sub">Pelajaran pilihan</p>
+      <ul class="chips">
+        <li>Physics</li>
+        <li>CIT</li>
+        <li>Math</li>
+      </ul>
+    </section>
+
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <ul class="skills">
+        <li>Dapat mengerjakan tugas dengan ketelitian yang tinggi</li>
+        <li>Selalu menyelesaikan tugas sesempurna mungkin</li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <div class="contact">
+        <ul class="info">
+          <li><small>Telepon</small><a href="tel:+6281391477604">081391477604</a></li>
+          <li><small>Email</small><a href="mailto:riakeyzhia@gmail.com">riakeyzhia@gmail.com</a></li>
+          <li><small>Instagram</small><a href="https://instagram.com/key.nrl" target="_blank" rel="noopener">@key.nrl</a></li>
+          <li><small>Alamat</small>Divisi 4, PT Gunung Madu Plantation, Lampung Tengah</li>
+        </ul>
+
+        <form id="form">
+          <label>Nama
+            <input type="text" id="nama" required autocomplete="name">
+          </label>
+          <label>Email
+            <input type="email" id="email" required autocomplete="email">
+          </label>
+          <label>Pesan
+            <textarea id="pesan" required></textarea>
+          </label>
+          <button class="btn" type="submit">Kirim pesan</button>
+          <p class="note" id="status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('theme');
+
+  function isDark(){
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function apply(t){
+    root.setAttribute('data-theme', t);
+    btn.textContent = t === 'dark' ? 'Mode terang' : 'Mode gelap';
+    btn.setAttribute('aria-pressed', t === 'dark');
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem('cv-theme'); } catch(e){}
+  apply(saved || (isDark() ? 'dark' : 'light'));
+
+  btn.addEventListener('click', function(){
+    var next = isDark() ? 'light' : 'dark';
+    apply(next);
+    try { localStorage.setItem('cv-theme', next); } catch(e){}
+  });
+
+  // Unduh CV: pilih "Simpan sebagai PDF" di jendela cetak
+  document.getElementById('download').addEventListener('click', function(){
+    window.print();
+  });
+
+  // Formulir kontak: membuka aplikasi email dengan pesan yang sudah terisi
+  document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var nama = document.getElementById('nama').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var pesan = document.getElementById('pesan').value.trim();
+    var subject = encodeURIComponent('Pesan dari ' + nama);
+    var body = encodeURIComponent(pesan + '\n\nNama: ' + nama + '\nEmail: ' + email);
+    window.location.href = 'mailto:riakeyzhia@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('status').textContent = 'Aplikasi email kamu akan terbuka. Tekan kirim di sana untuk menyelesaikan.';
+  });
+})();
+</script>
+</body>
+    </html>
